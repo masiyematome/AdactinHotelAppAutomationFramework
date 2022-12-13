@@ -1,4 +1,6 @@
 ﻿{
   "webBrowser": "chrome",
-  "adactinUrl": "http://adactinhotelapp.com/"
+  "adactinUrl": "http://adactinhotelapp.com/",
+  "adactinLoginUsername": "matomemasiye7",
+  "adactinLoginPassword": "matomemasiye7"
 }
