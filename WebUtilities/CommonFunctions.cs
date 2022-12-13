@@ -15,7 +15,6 @@ namespace AdactinHotelAppAutomationFramework.WebUtilities
             string webBrowser = jsonObj.GetValue("webBrowser").ToString();
             string appUrl = jsonObj.GetValue("adactinUrl").ToString();
 
-
             webBrowserConfig.SetWebDriver(webBrowser);
             driver = webBrowserConfig.GetWebDriver();
 
