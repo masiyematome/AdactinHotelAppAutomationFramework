@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "KZowZ747/Kz+8CaVH/03NAqaC7ST1QFt5W180wxpfESyN6zYIsFTxrleLaeZcz+dyN890++9IebUDGvg7xoR6A==",
+  "dgSpecHash": "nUeLnCzj2e3vn8GLfFj7dmM9iBOs62IHWSd1uDKCTDTfdxHU8+XLar6a6XY55ggAzSaFgj8YbADsF0hMXngPCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matome.Masiye\\Documents\\C#\\AdactinHotelAppAutomationFramework\\AdactinHotelAppAutomationFramework.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matome.Masiye\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\Matome.Masiye\\.nuget\\packages\\dotnetseleniumextras.pageobjects\\3.11.0\\dotnetseleniumextras.pageobjects.3.11.0.nupkg.sha512",
+    "C:\\Users\\Matome.Masiye\\.nuget\\packages\\dotnetseleniumextras.pageobjects.core\\4.3.0\\dotnetseleniumextras.pageobjects.core.4.3.0.nupkg.sha512",
     "C:\\Users\\Matome.Masiye\\.nuget\\packages\\microsoft.codecoverage\\17.4.0\\microsoft.codecoverage.17.4.0.nupkg.sha512",
     "C:\\Users\\Matome.Masiye\\.nuget\\packages\\microsoft.net.test.sdk\\17.4.0\\microsoft.net.test.sdk.17.4.0.nupkg.sha512",
     "C:\\Users\\Matome.Masiye\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",

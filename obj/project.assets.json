@@ -31,6 +31,18 @@
           "lib/netstandard2.0/SeleniumExtras.PageObjects.dll": {}
         }
       },
+      "DotNetSeleniumExtras.PageObjects.Core/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "4.3.0"
+        },
+        "compile": {
+          "lib/net5.0/SeleniumExtras.PageObjects.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/SeleniumExtras.PageObjects.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/17.4.0": {
         "type": "package",
         "compile": {
@@ -632,6 +644,21 @@
         "lib/net35/SeleniumExtras.PageObjects.dll",
         "lib/net40/SeleniumExtras.PageObjects.dll",
         "lib/net45/SeleniumExtras.PageObjects.dll",
+        "lib/netstandard2.0/SeleniumExtras.PageObjects.dll"
+      ]
+    },
+    "DotNetSeleniumExtras.PageObjects.Core/4.3.0": {
+      "sha512": "ZqD0Rx5On7NvcwAQbnNnnUy1czifVYin17TN4jnWCIKkKofBJLMK0a0aR/uQ7sF9atUlOKHJRLjs6mZQ9shbTw==",
+      "type": "package",
+      "path": "dotnetseleniumextras.pageobjects.core/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "dotnetseleniumextras.pageobjects.core.4.3.0.nupkg.sha512",
+        "dotnetseleniumextras.pageobjects.core.nuspec",
+        "lib/net462/SeleniumExtras.PageObjects.dll",
+        "lib/net5.0/SeleniumExtras.PageObjects.dll",
         "lib/netstandard2.0/SeleniumExtras.PageObjects.dll"
       ]
     },
@@ -1508,6 +1535,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "DotNetSeleniumExtras.PageObjects >= 3.11.0",
+      "DotNetSeleniumExtras.PageObjects.Core >= 4.3.0",
       "Microsoft.NET.Test.Sdk >= 17.4.0",
       "NUnit >= 3.13.3",
       "NUnit3TestAdapter >= 4.3.1",
@@ -1567,6 +1595,10 @@
           "DotNetSeleniumExtras.PageObjects": {
             "target": "Package",
             "version": "[3.11.0, )"
+          },
+          "DotNetSeleniumExtras.PageObjects.Core": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

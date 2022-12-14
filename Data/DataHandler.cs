@@ -9,7 +9,7 @@ namespace AdactinHotelAppAutomationFramework.Data
 {
     class DataHandler
     {
-        public JObject ReadJsonFiles(string fileLocation)
+        public static JObject ReadJsonFiles(string fileLocation)
         {
 
             string currentWorkingDirectory = Directory.GetCurrentDirectory();
