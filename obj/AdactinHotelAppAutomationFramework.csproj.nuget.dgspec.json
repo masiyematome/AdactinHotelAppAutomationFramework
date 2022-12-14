@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "DotNetSeleniumExtras.PageObjects": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.4.0, )"
@@ -61,9 +65,21 @@
               "target": "Package",
               "version": "[13.0.2, )"
             },
+            "PageFactoryCore": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "SeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[1.0.2, )"
             },
             "WebDriverManager": {
               "target": "Package",

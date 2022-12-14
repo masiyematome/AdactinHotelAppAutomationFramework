@@ -1,4 +1,6 @@
 ﻿using AdactinHotelAppAutomationFramework.Data;
+using AdactinHotelAppAutomationFramework.Utilities;
+using AdactinHotelAppAutomationFramework.WebPageObjects;
 using AdactinHotelAppAutomationFramework.WebUtilities;
 using Newtonsoft.Json.Linq;
 using OpenQA.Selenium;
@@ -8,9 +10,11 @@ namespace AdactinHotelAppAutomationFramework.WebPageFunctions
     class WebFunctions
     {
 
-        private WebBrowserConfig webBrowserConfig = new WebBrowserConfig();
-        private DataHandler dataHandler = new DataHandler();
+        private readonly WebBrowserConfig webBrowserConfig = new WebBrowserConfig();
+        private readonly LandingPage landingPage = new LandingPage();
+        private readonly DataHandler dataHandler = new DataHandler();
         private IWebDriver? driver;
+
         public void LaunchAdactin()
         {
 
@@ -19,9 +23,10 @@ namespace AdactinHotelAppAutomationFramework.WebPageFunctions
             webBrowserConfig.SetWebDriver(jsonResults.GetValue("webBrowser").ToString());
             driver = webBrowserConfig.GetWebDriver();
 
+
             if (driver is not null)
             {
-
+                
                 driver.Url = jsonResults.GetValue("adactinUrl").ToString();
 
                 driver.Manage().Window.Maximize();
@@ -31,6 +36,8 @@ namespace AdactinHotelAppAutomationFramework.WebPageFunctions
         }
         public void LoginToAdactin()
         {
+
+            
 
         }
 
