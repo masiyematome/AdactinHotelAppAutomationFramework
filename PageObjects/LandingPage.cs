@@ -21,7 +21,7 @@ namespace AdactinHotelAppAutomationFramework.WebPageFunctions
 
             this.driver = driver;
             jsonResults = DataHandler.ReadJsonFiles("\\properties\\environment.json");
-            landingPageRepo = new LandingPageRepo(driver);
+            landingPageRepo = new LandingPageRepo();
 
         }
 
@@ -36,9 +36,9 @@ namespace AdactinHotelAppAutomationFramework.WebPageFunctions
         public void LoginToAdactin()
         {
 
-            WebActions.CaptureData(driver, landingPageRepo.txtUsername, jsonResults.GetValue("adactinLoginUsername").ToString());
-            WebActions.CaptureData(driver, landingPageRepo.txtPassword, jsonResults.GetValue("adactinLoginPassword").ToString());
-            WebActions.ClickOnObject(driver, landingPageRepo.btnLogin);
+            WebActions.CaptureData(driver, landingPageRepo.getLandingPageInputs("username"), jsonResults.GetValue("adactinLoginUsername").ToString());
+            WebActions.CaptureData(driver, landingPageRepo.getLandingPageInputs("password"), jsonResults.GetValue("adactinLoginPassword").ToString());
+            WebActions.ClickOnObject(driver, landingPageRepo.getLandingPageInputs("login"));
  
         }
 

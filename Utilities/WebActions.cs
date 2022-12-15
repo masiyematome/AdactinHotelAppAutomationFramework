@@ -5,17 +5,21 @@ namespace AdactinHotelAppAutomationFramework.Utilities
 {
     class WebActions
     {
-        public static void ClickOnObject(IWebDriver driver,IWebElement element)
+        public static void ClickOnObject(IWebDriver driver,By element)
         {
 
-            element.Click();
+            Utils.WaitForProperty(driver, element, 10, 2, "clickability");
+
+            driver.FindElement(element).Click();
              
         }
 
-        public static void CaptureData(IWebDriver driver,IWebElement element,string data)
+        public static void CaptureData(IWebDriver driver,By element,string data)
         {
 
-            element.SendKeys(data);
+            Utils.WaitForProperty(driver, element, 10, 2, "clickability");
+
+            driver.FindElement(element).SendKeys(data);
 
         }
     }

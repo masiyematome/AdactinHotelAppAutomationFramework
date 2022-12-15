@@ -7,23 +7,10 @@ namespace AdactinHotelAppAutomationFramework.WebPageObjects
     class LandingPageRepo
     {
 
-        private readonly IWebDriver driver;
-        public LandingPageRepo(IWebDriver driver)
+        public By getLandingPageInputs(string pathId)
         {
-
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
-
+            return By.XPath(string.Format("//input[@id = '{0}']",pathId));
         }
-
-        [FindsBy(How = How.XPath, Using = "//input[@id = 'username']")]
-        public IWebElement txtUsername;
-
-        [FindsBy(How = How.XPath, Using = "//input[@id = 'password']")]
-        public IWebElement txtPassword;
-
-        [FindsBy(How = How.XPath, Using = "//input[@id = 'login']")]
-        public IWebElement btnLogin;
 
     }
 }
