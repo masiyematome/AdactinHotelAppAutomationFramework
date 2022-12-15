@@ -7,7 +7,7 @@ namespace AdactinHotelAppAutomationFramework.WebPageObjects
     class LandingPageRepo
     {
 
-        public By getLandingPageInputs(string pathId)
+        public By GetLandingPageInputs(string pathId)
         {
             return By.XPath(string.Format("//input[@id = '{0}']",pathId));
         }

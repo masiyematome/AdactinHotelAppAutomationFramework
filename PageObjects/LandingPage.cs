@@ -36,9 +36,9 @@ namespace AdactinHotelAppAutomationFramework.WebPageFunctions
         public void LoginToAdactin()
         {
 
-            WebActions.CaptureData(driver, landingPageRepo.getLandingPageInputs("username"), jsonResults.GetValue("adactinLoginUsername").ToString());
-            WebActions.CaptureData(driver, landingPageRepo.getLandingPageInputs("password"), jsonResults.GetValue("adactinLoginPassword").ToString());
-            WebActions.ClickOnObject(driver, landingPageRepo.getLandingPageInputs("login"));
+            WebActions.CaptureData(driver, landingPageRepo.GetLandingPageInputs("username"), jsonResults.GetValue("adactinLoginUsername").ToString());
+            WebActions.CaptureData(driver, landingPageRepo.GetLandingPageInputs("password"), jsonResults.GetValue("adactinLoginPassword").ToString());
+            WebActions.ClickOnObject(driver, landingPageRepo.GetLandingPageInputs("login"));
  
         }
 

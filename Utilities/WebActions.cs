@@ -14,12 +14,15 @@ namespace AdactinHotelAppAutomationFramework.Utilities
              
         }
 
-        public static void CaptureData(IWebDriver driver,By element,string data)
+        public static void CaptureData(IWebDriver driver,By elementLocator,string data)
         {
 
-            Utils.WaitForProperty(driver, element, 10, 2, "clickability");
+            IWebElement elementToCaptureInto = driver.FindElement(elementLocator);
 
-            driver.FindElement(element).SendKeys(data);
+            Utils.WaitForProperty(driver, elementLocator, 10, 2, "clickability");
+
+            elementToCaptureInto.Clear();
+            elementToCaptureInto.SendKeys(data);
 
         }
     }
