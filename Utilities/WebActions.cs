@@ -1,5 +1,6 @@
 ﻿using System;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace AdactinHotelAppAutomationFramework.Utilities
 {
@@ -25,5 +26,19 @@ namespace AdactinHotelAppAutomationFramework.Utilities
             elementToCaptureInto.SendKeys(data);
 
         }
+
+        public static void HandleDropDowns(IWebDriver driver,By elementLocator,string elementToSelect)
+        {
+
+            IWebElement targetDropdownElement = driver.FindElement(elementLocator);
+
+            SelectElement selectElement = new SelectElement(targetDropdownElement);
+
+            Utils.WaitForProperty(driver, elementLocator, 10, 2, "clickability");
+
+            selectElement.SelectByText(elementToSelect);
+           
+        }
+
     }
 }
