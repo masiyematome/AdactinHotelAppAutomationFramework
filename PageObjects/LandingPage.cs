@@ -18,14 +18,13 @@ namespace AdactinHotelAppAutomationFramework.WebPageFunctions
 
         public LandingPage(IWebDriver driver)
         {
-
             this.driver = driver;
             jsonResults = DataHandler.ReadJsonFiles("\\properties\\environment.json");
             landingPageRepo = new LandingPageRepo();
 
         }
 
-        public void LaunchAdactin(IWebDriver driver)
+        public void LaunchAdactin()
         {
 
             driver.Url = jsonResults.GetValue("adactinUrl").ToString();

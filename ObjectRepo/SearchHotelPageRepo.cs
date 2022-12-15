@@ -4,23 +4,23 @@ using SeleniumExtras.PageObjects;
 
 namespace AdactinHotelAppAutomationFramework.ObjectRepo
 {
-    class WelcomePageRepo
+    class SearchHotelPageRepo
     {
-        public By GetWelcomePageSelects(string selectLocatorId)
+        public By GetSearchHotelPageSelects(string selectLocatorId)
         {
 
             return By.XPath(string.Format("//select[@id = '{0}']",selectLocatorId));
 
         }
 
-        public By GetWelcomePageInputs(string inputLocatorId)
+        public By GetSearchHotelPageInputs(string inputLocatorId)
         {
 
             return By.XPath(string.Format("//input[@id = '{0}']",inputLocatorId));
 
         }
 
-        public By GetWelcomePageLinks(string locatorText)
+        public By GetSearchHotelPageLinks(string locatorText)
         {
 
             return By.XPath(string.Format("//a[text()[contains(.,'{0}')]]",locatorText));
