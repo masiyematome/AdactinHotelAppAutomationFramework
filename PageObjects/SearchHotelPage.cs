@@ -1,4 +1,5 @@
-﻿using AdactinHotelAppAutomationFramework.ObjectRepo;
+﻿using AdactinHotelAppAutomationFramework.Data;
+using AdactinHotelAppAutomationFramework.ObjectRepo;
 using AdactinHotelAppAutomationFramework.Utilities;
 using OpenQA.Selenium;
 using System;
@@ -22,6 +23,7 @@ namespace AdactinHotelAppAutomationFramework.PageObjects
         public void CaptureHotelDetailsAndSearch(string location,string hotels,string roomType,string roomNos,string checkInDate,string checkOutDate,string adultRoom,string childRoom)
         {
 
+            
             WebActions.HandleDropDowns(driver, searchHotelPageRepo.GetSearchHotelPageSelects("location"), location);
 
             WebActions.HandleDropDowns(driver, searchHotelPageRepo.GetSearchHotelPageSelects("hotels"), hotels);

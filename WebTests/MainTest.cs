@@ -17,7 +17,7 @@ namespace AdactinHotelAppAutomationFramework.WebTests
         private SearchHotelPage welcomePage;
         private IWebDriver? driver;
 
-        [OneTimeSetUp]
+        [SetUp]
         public void setUp()
         {
 
@@ -39,6 +39,14 @@ namespace AdactinHotelAppAutomationFramework.WebTests
             landingPage.LaunchAdactin();
             landingPage.LoginToAdactin();
             welcomePage.CaptureHotelDetailsAndSearch("London", "Hotel Hervey", "Deluxe", "4 - Four", "15/12/2022","20/12/2022", "2 - Two", "3 - Three");
+
+        }
+
+        [TearDown]
+        public void tearDown()
+        {
+
+            driver.Quit();
 
         }
 
