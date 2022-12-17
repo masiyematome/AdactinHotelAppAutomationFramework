@@ -14,7 +14,7 @@ namespace AdactinHotelAppAutomationFramework.WebTests
     {
         private LandingPage landingPage;
         private WebBrowserConfig webBrowserConfig;
-        private SearchHotelPage welcomePage;
+        private SearchHotelPage searchHotelPage;
         private IWebDriver? driver;
 
         [SetUp]
@@ -28,7 +28,7 @@ namespace AdactinHotelAppAutomationFramework.WebTests
             driver = webBrowserConfig.GetWebDriver();
 
             landingPage = new LandingPage(driver);
-            welcomePage = new SearchHotelPage(driver);
+            searchHotelPage = new SearchHotelPage(driver);
 
         }
 
@@ -38,7 +38,7 @@ namespace AdactinHotelAppAutomationFramework.WebTests
 
             landingPage.LaunchAdactin();
             landingPage.LoginToAdactin();
-            welcomePage.CaptureHotelDetailsAndSearch("London", "Hotel Hervey", "Deluxe", "4 - Four", "15/12/2022","20/12/2022", "2 - Two", "3 - Three");
+            searchHotelPage.CaptureHotelDetailsAndSearch("London", "Hotel Hervey", "Deluxe", "4 - Four", "15/12/2022","20/12/2022", "2 - Two", "3 - Three");
 
         }
 
@@ -46,6 +46,7 @@ namespace AdactinHotelAppAutomationFramework.WebTests
         public void tearDown()
         {
 
+            searchHotelPage.Logout();
             driver.Quit();
 
         }

@@ -22,7 +22,6 @@ namespace AdactinHotelAppAutomationFramework.PageObjects
 
         public void CaptureHotelDetailsAndSearch(string location,string hotels,string roomType,string roomNos,string checkInDate,string checkOutDate,string adultRoom,string childRoom)
         {
-
             
             WebActions.HandleDropDowns(driver, searchHotelPageRepo.GetSearchHotelPageSelects("location"), location);
 
@@ -46,6 +45,11 @@ namespace AdactinHotelAppAutomationFramework.PageObjects
 
             WebActions.ClickOnObject(driver, searchHotelPageRepo.GetSearchHotelPageInputs("continue"));
 
+        }
+
+        public void Logout()
+        {
+            WebActions.ClickOnObject(driver, searchHotelPageRepo.GetSearchHotelPageLinks("Logout"));
         }
 
     }
