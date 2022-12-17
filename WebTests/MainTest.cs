@@ -39,6 +39,7 @@ namespace AdactinHotelAppAutomationFramework.WebTests
             landingPage.LaunchAdactin();
             landingPage.LoginToAdactin();
             searchHotelPage.CaptureHotelDetailsAndSearch("London", "Hotel Hervey", "Deluxe", "4 - Four", "15/12/2022","20/12/2022", "2 - Two", "3 - Three");
+            searchHotelPage.BookAHotel("Matome", "Masiye", "54 Shamroc Ave,Midrand", "5465858796585412", "VISA", "December", "2022", "856");
 
         }
 
